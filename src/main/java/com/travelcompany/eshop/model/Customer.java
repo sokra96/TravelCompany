@@ -19,14 +19,14 @@ public class Customer {
     private String nationality;
     private CustomerCategory category;
 
-    //public Customer(int cId, String name, String email, String address, String nationality, CustomerCategory category) {
-    //    this.cId = cId;
-    //    this.name = name;
-    //    this.email = email;
-    //    this.address = address;
-    //    this.nationality = nationality;
-    //    this.category = category;
-    //}
+    public Customer(int cId, String name, String email, String address, String nationality, CustomerCategory category) {
+        this.cId = cId;
+        this.name = name;
+        this.email = email;
+        this.address = address;
+        this.nationality = nationality;
+        this.category = category;
+    }
 
     public int getcId() {
         return cId;
