@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface ItineraryRepository {
     boolean createItinerary(Itinerary itinerary);
-    List<Itinerary> readItineraries();
+    String readItineraries();
     Itinerary readItinerary(int itId);
     boolean updateItinerary();
     boolean deleteItinerary();

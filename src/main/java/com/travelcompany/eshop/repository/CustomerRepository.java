@@ -16,8 +16,8 @@ public interface CustomerRepository {
     //CRUD
     
     boolean createCustomer(Customer customer);
-    List<Customer> readCustomers();
-    Customer readCustomer(int cId);
+    String readCustomers();
+    String readCustomer(int cId);
     boolean updateCustomer();
     boolean deleteCustomer();
     

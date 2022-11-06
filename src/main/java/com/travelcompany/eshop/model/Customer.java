@@ -19,6 +19,19 @@ public class Customer {
     private String nationality;
     private CustomerCategory category;
 
+    public Customer(int cId, String name, String email, String address, String nationality, CustomerCategory category) {
+        this.cId = cId;
+        this.name = name;
+        this.email = email;
+        this.address = address;
+        this.nationality = nationality;
+        this.category = category;
+    }
+    
+    @Override
+    public String toString(){
+        return this.cId +" " + this.name +" " + this.email + " " + this.address + " " + this.nationality + " " + this.category;
+    }
     
 
     public int getcId() {

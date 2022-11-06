@@ -24,12 +24,12 @@ public class ItineraryRepositoryImpl implements ItineraryRepository {
     }
 
     @Override
-    public List<Itinerary> readItineraries() {
+    public String readItineraries() {
         List<Itinerary> returnItineraries = new ArrayList<>();
         for (Itinerary itinerary : itineraries) {
             returnItineraries.add(itinerary);
         }
-        return returnItineraries;
+        return returnItineraries.toString();
     }
 
     @Override

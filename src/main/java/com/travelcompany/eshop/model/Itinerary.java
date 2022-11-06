@@ -12,11 +12,11 @@ public class Itinerary {
     private int itId;
     private String dep_code;
     private String dest_code;
-    private Date dep_date;
+    private String dep_date;
     private String airline;
     private BigDecimal price;
 
-    public Itinerary(int itId, String dep_code, String dest_code, Date dep_date, String airline, BigDecimal price) {
+    public Itinerary(int itId, String dep_code, String dest_code, String dep_date, String airline, BigDecimal price) {
         this.itId = itId;
         this.dep_code = dep_code;
         this.dest_code = dest_code;
@@ -24,7 +24,10 @@ public class Itinerary {
         this.airline = airline;
         this.price = price;
     }
-
+    @Override
+    public String toString(){
+        return this.itId +" " + this.dep_code +" " + this.dest_code + " " + this.dep_date + " " + this.airline + " " + this.price;
+    }
     
     public int getItId() {
         return itId;
@@ -50,11 +53,11 @@ public class Itinerary {
         this.dest_code = dest_code;
     }
 
-    public Date getDep_date() {
+    public String getDep_date() {
         return dep_date;
     }
 
-    public void setDep_date(Date dep_date) {
+    public void setDep_date(String dep_date) {
         this.dep_date = dep_date;
     }
 

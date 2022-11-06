@@ -24,20 +24,20 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public List <Customer> readCustomers() {
+    public String readCustomers() {
         List<Customer> returnCustomers = new ArrayList<>();
         for (Customer customer : customers) {
             returnCustomers.add(customer);
         }
-        
-        return returnCustomers.subList(0, 0);
+     
+        return returnCustomers.toString();
     }
 
     @Override
-    public Customer readCustomer(int cId) {
+    public String readCustomer(int cId) {
         for(Customer customer : customers){
             if(customer.getcId() == cId){
-                return customer;
+                return customer.toString();
             }
         }
         return null; // If the customer doesnt be found
@@ -53,4 +53,5 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    
 }
