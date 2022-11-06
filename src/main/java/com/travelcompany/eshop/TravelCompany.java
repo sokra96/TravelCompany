@@ -8,6 +8,8 @@ import com.travelcompany.eshop.enums.CustomerCategory;
 
 import com.travelcompany.eshop.model.Customer;
 import com.travelcompany.eshop.repository.CustomerRepositoryImpl;
+import com.travelcompany.eshop.service.CustomerServiceImpl;
+import com.travelcompany.eshop.service.ItineraryServiceImpl;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -18,16 +20,12 @@ import java.util.Arrays;
 public class TravelCompany {
 
     public static void main(String[] args) {
-        Customer customer = new Customer();
-        customer.setcId(1);
-        customer.setName("Maria Iordanou");
-        customer.setEmail("miordanou@mail.com");
-        customer.setAddress("Athens");
-        customer.setNationality("Greek");
-        customer.setCategory(CustomerCategory.INDIVIDUAL);
-        CustomerRepositoryImpl customerRepository = new CustomerRepositoryImpl();
-        customerRepository.createCustomer(customer);
-        customerRepository.readCustomers();
+      CustomerServiceImpl customerservice = new CustomerServiceImpl(); 
+      customerservice.CustomersList();
+      
+      ItineraryServiceImpl itineraryservice = new ItineraryServiceImpl();
+      itineraryservice.ItineraryList();
+        
         
 
     }
