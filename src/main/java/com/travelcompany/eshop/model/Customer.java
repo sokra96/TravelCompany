@@ -10,37 +10,17 @@ import com.travelcompany.eshop.enums.CustomerCategory;
  * Customer Class with its variables, constructor and setters getters methods
  * @author mantz
  */
-public class Customer {
+public class  Customer extends Id {
 
-    private int cId;
+    
     private String name;
     private String email;
     private String address;
     private String nationality;
     private CustomerCategory category;
 
-    public Customer(int cId, String name, String email, String address, String nationality, CustomerCategory category) {
-        this.cId = cId;
-        this.name = name;
-        this.email = email;
-        this.address = address;
-        this.nationality = nationality;
-        this.category = category;
-    }
     
-    @Override
-    public String toString(){
-        return this.cId +" " + this.name +" " + this.email + " " + this.address + " " + this.nationality + " " + this.category;
-    }
-    
-
-    public int getcId() {
-        return cId;
-    }
-
-    public void setcId(int cId) {
-        this.cId = cId;
-    }
+  
 
     public String getName() {
         return name;

@@ -5,20 +5,13 @@
 package com.travelcompany.eshop.repository;
 
 import com.travelcompany.eshop.model.Customer;
-import java.util.List;
 
 /**
- * The interface for customer (CRUD)
+ *
  * @author mantz
  */
-public interface CustomerRepository {
-    
-    //CRUD
-    
-    boolean createCustomer(Customer customer);
-    String readCustomers();
-    String readCustomer(int cId);
-    boolean updateCustomer();
-    boolean deleteCustomer();
-    
+public interface CustomerRepository extends Repository<Customer> {
+    void updateAd (int customerId, String address);
+    void updateEm (int customerId, String email);
+    void updateAdEm (int customerId, String address, String email);
 }

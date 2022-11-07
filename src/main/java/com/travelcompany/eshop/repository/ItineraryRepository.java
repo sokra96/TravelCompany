@@ -5,16 +5,12 @@
 package com.travelcompany.eshop.repository;
 
 import com.travelcompany.eshop.model.Itinerary;
-import java.util.List;
+import java.math.BigDecimal;
 
 /**
- * The interface for itinerary (CRUD)
+ *
  * @author mantz
  */
-public interface ItineraryRepository {
-    boolean createItinerary(Itinerary itinerary);
-    String readItineraries();
-    Itinerary readItinerary(int itId);
-    boolean updateItinerary();
-    boolean deleteItinerary();
+public interface ItineraryRepository extends Repository<Itinerary>{
+    void update(int itineraryId,BigDecimal price);
 }
