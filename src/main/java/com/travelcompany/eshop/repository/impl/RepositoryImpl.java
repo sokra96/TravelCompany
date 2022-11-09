@@ -23,12 +23,12 @@ public abstract class RepositoryImpl<T extends Id> implements Repository<T> {
 
      @Override
     public  int create(T t){
-        t.setId(index++);
+        //t.setId(Id);
         list.add(t);
         return t.getId();
     }
    
-
+    
     @Override
     public  List<T> read(){
         return list;

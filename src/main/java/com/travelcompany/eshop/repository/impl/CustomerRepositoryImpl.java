@@ -12,7 +12,7 @@ import com.travelcompany.eshop.repository.CustomerRepository;
  *
  * @author mantz
  */
-public abstract class CustomerRepositoryImpl extends RepositoryImpl<Customer> implements CustomerRepository {
+public  class CustomerRepositoryImpl extends RepositoryImpl<Customer> implements CustomerRepository {
 
     @Override
     public void updateAdEm(int customerId, String address, String email) {

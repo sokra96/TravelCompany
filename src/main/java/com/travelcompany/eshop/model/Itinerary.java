@@ -59,6 +59,9 @@ public class Itinerary extends Id{
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
-    
+    @Override
+    public String toString(){
+    return " "+getId()+" "+this.dep_code+" "+ this.dest_code+" " +this.dep_date+" " + this.airline+" " + this.price;
+}
     
 }

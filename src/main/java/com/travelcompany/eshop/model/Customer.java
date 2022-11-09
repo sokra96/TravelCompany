@@ -61,5 +61,8 @@ public class  Customer extends Id {
     public void setCategory(CustomerCategory category) {
         this.category = category;
     }
-
+    @Override
+    public String toString(){
+    return " "+getId()+" "+this.name+" "+ this.email+" " +this.address+" " + this.nationality+" " + this.category;
+}
 }

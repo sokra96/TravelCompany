@@ -4,17 +4,34 @@
  */
 package com.travelcompany.eshop;
 
-
+import com.travelcompany.eshop.exceptions.CustomerException;
+import com.travelcompany.eshop.repository.CustomerRepository;
+import com.travelcompany.eshop.repository.impl.CustomerRepositoryImpl;
+import com.travelcompany.eshop.repository.impl.ItineraryRepositoryImpl;
+import com.travelcompany.eshop.repository.impl.TicketRepositoryImpl;
+import com.travelcompany.eshop.util.Data;
 
 /**
  * for testing
- * @author mantz
+ *
+
+* @author mantz
  */
 public class TravelCompany {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CustomerException {
+        CustomerRepositoryImpl customerepository = new CustomerRepositoryImpl();
+        ItineraryRepositoryImpl itineraryrepository = new ItineraryRepositoryImpl();
+        TicketRepositoryImpl ticketrepository = new TicketRepositoryImpl();
+       
+       Data data = new Data(customerepository,itineraryrepository,ticketrepository);
+       data.insertCustomers();
+       data.insertItineraries();
+       
+       data.GenerateTicket();
       
+ 
+       
         
-      
     }
 }
