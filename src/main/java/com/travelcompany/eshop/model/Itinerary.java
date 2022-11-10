@@ -1,24 +1,20 @@
-
 package com.travelcompany.eshop.model;
 
 import com.travelcompany.eshop.enums.Airports;
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
  * Itinerary Class with its variables and setters geters
+ *
  * @author mantz
  */
-public class Itinerary extends Id{
-   
+public class Itinerary extends Id {
+
     private Airports dep_code;
     private Airports dest_code;
     private String dep_date;
     private String airline;
     private BigDecimal price;
-
-    
-    
 
     public Airports getDep_code() {
         return dep_code;
@@ -59,6 +55,10 @@ public class Itinerary extends Id{
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return " " + getId() + " " + this.dep_code + " " + this.dest_code + " " + this.dep_date + " " + this.airline + " " + this.price;
+    }
+
 }
