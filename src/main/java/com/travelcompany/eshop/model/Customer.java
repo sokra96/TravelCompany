@@ -1,26 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.travelcompany.eshop.model;
 
 import com.travelcompany.eshop.enums.CustomerCategory;
 
 /**
  * Customer Class with its variables, constructor and setters getters methods
+ *
  * @author mantz
  */
-public class  Customer extends Id {
+public class Customer extends Id {
 
-    
     private String name;
     private String email;
     private String address;
     private String nationality;
     private CustomerCategory category;
-
-    
-  
 
     public String getName() {
         return name;
@@ -61,8 +54,9 @@ public class  Customer extends Id {
     public void setCategory(CustomerCategory category) {
         this.category = category;
     }
+
     @Override
-    public String toString(){
-    return " "+getId()+" "+this.name+" "+ this.email+" " +this.address+" " + this.nationality+" " + this.category;
-}
+    public String toString() {
+        return " " + getId() + " " + this.name + " " + this.email + " " + this.address + " " + this.nationality + " " + this.category;
+    }
 }

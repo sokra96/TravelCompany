@@ -1,18 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.travelcompany.eshop.model;
 
-import com.travelcompany.eshop.enums.CustomerCategory;
 import com.travelcompany.eshop.enums.PaymentCategory;
 import java.math.BigDecimal;
 
 /**
  * Tickets Class with its variables, constructor and setters getters methods
+ *
  * @author mantz
  */
-public class Ticket extends Id{
+public class Ticket extends Id {
+
     private int cid;
     private int iid;
     private PaymentCategory payMethod;
@@ -33,7 +30,7 @@ public class Ticket extends Id{
     public void setIid(int iid) {
         this.iid = iid;
     }
-    
+
     public PaymentCategory getPayMethod() {
         return payMethod;
     }
@@ -49,8 +46,9 @@ public class Ticket extends Id{
     public void setPrAmount(BigDecimal prAmount) {
         this.prAmount = prAmount;
     }
+
     @Override
-    public String toString(){
-    return " "+getId()+" "+this.cid+" "+ this.iid+" " +this.payMethod+" " + this.prAmount;
+    public String toString() {
+        return " " + getId() + " " + this.cid + " " + this.iid + " " + this.payMethod + " " + this.prAmount;
     }
 }
