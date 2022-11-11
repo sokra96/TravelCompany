@@ -12,6 +12,8 @@ import com.travelcompany.eshop.repository.CustomerRepository;
 import com.travelcompany.eshop.repository.ItineraryRepository;
 import com.travelcompany.eshop.repository.TicketRepository;
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 /**
  *
@@ -97,7 +99,7 @@ public class Data {
                 }
             } catch (Exception e) {
                 String message = e.toString();
-                System.out.println(CustomerExceptionsCodes.AIRPORT_ERROR + message.substring(92));
+                System.out.println(CustomerExceptionsCodes.AIRPORT_ERROR + message.substring(92)+ " doesnt exist in our available itineraries.");
             }
         }
     }
@@ -123,13 +125,14 @@ public class Data {
         }
         BigDecimal price1 = itineraryprice.multiply(discount);
         BigDecimal price = price1.add(itineraryprice);
-        price = price.setScale(2, BigDecimal.ROUND_CEILING);
+        price = price.round(new MathContext(2, RoundingMode.HALF_UP));
         return price;
     }
 /**
  * Generates each ticket seperately using the calculatePrice method to find the price for each ticket
  */
     public void GenerateTicket() {
+       
         {
             try {
                 Ticket ticket1 = new Ticket();
