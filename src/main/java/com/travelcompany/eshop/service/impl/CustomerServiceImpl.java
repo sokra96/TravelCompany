@@ -83,7 +83,7 @@ public class CustomerServiceImpl implements CustomerService {
         return list2;
     }
     /**
-     * Printing using the Map collection, the uniques itineraries per destination
+     * Printing using the Map collection, the unique itineraries per destination
      * @return
      * @throws CustomerException 
      */
